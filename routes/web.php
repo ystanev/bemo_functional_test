@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
+Route::get('/contact-us', 'ContactUsController@index');
