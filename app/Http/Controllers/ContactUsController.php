@@ -8,7 +8,7 @@ class ContactUsController extends Controller
 {
     // render the view
     public function index() {
-        return view('contact-us');
+        return view('pages.contact-us');
     }
 
     public function contactUSPost(Request $request)
