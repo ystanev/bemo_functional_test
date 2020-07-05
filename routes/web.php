@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('main');
-});
+})->middleware('auth');
 
-Route::get('/contact-us', 'ContactUsController@index');
+Route::get('/contact-us', 'ContactUsController@index')->middleware('auth'); // protect the route
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
