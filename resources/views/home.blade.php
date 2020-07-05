@@ -1,3 +1,9 @@
+<head>
+    <meta name="description" content="" />
+    <meta name="title" content="" />
+    <meta name="robots" content="noindex">
+</head>
+
 @extends('layouts.app')
 
 @section('content')
